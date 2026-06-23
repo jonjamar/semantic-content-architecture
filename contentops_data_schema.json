@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "id": "https://contentops.so/schemas/contentops_data_schema.json",
+  "title": "ContentOps Master Data Architecture Schema",
+  "description": "Governs the application state for Human-in-the-Loop content operations, topical map indexing, and deterministic asset deployment.",
+  "type": "object",
+  "required": [
+    "systemConfig",
+    "brandingGrounding",
+    "nodes"
+  ],
+  "properties": {
+    "systemConfig": {
+      "type": "object",
+      "description": "Defines the infrastructural operational parameters and token economic thresholds.",
+      "required": [
+        "runtimeTier",
+        "nodeCapacityCap",
+        "byokEnabled"
+      ],
+      "properties": {
+        "runtimeTier": {
+          "type": "string",
+          "enum": [
+            "The Jack",
+            "The Architect"
+          ],
+          "description": "The active commercial operational layer assigned to the workstation domain."
+        },
+        "nodeCapacityCap": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The maximum absolute node limit allowed before upgrade protocols are triggered."
+        },
+        "byokEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Mandatory parameter passing API compute costs directly to user keys to eliminate Token Debt risk."
+        }
+      }
+    },
+    "brandingGrounding": {
+      "type": "object",
+      "description": "The Master Memory Card structure used to ground AI agents and hard-stop context history drift.",
+      "required": [
+        "storybrandPersonaReport",
+        "styleGuidelineVibe",
+        "brandVillains"
+      ],
+      "properties": {
+        "storybrandPersonaReport": {
+          "type": "string",
+          "description": "The ideological framework mapping the user as the Hero and the product as the guide."
+        },
+        "styleGuidelineVibe": {
+          "type": "string",
+          "description": "The specific guardrails dictates the tone of voice and emotional frequency of the prose clones."
+        },
+        "brandVillains": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The array of designated pathogens (e.g., The Green Light Gaslighter, Tool Overlords)."
+        }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "description": "The central repository node matrix managing individual content architecture blocks.",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "clusterTaxonomy",
+          "topicalMapPosition",
+          "targetKeywordTrajectory",
+          "shadowQuestionIntercept",
+          "internalLinks",
+          "coreOfferId"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique technical identifier matching the schema directory path."
+          },
+          "title": {
+            "type": "string",
+            "description": "The descriptive onscreen H1 headline asset."
+          },
+          "clusterTaxonomy": {
+            "type": "string",
+            "description": "The designated structural archipelago mapping this page to its semantic continent."
+          },
+          "topicalMapPosition": {
+            "type": "string",
+            "enum": [
+              "Pillar",
+              "Supporting",
+              "Bridge Node"
+            ],
+            "description": "The spatial coordinate within the local authority fortress phalanx."
+          },
+          "targetKeywordTrajectory": {
+            "type": "string",
+            "description": "The hard keyword string targeted for traditional search engine spiders inside the H1."
+          },
+          "shadowQuestionIntercept": {
+            "type": "string",
+            "description": "The bitemporal longtail query typing out customer frustration used to optimize the Meta Title tag."
+          },
+          "internalLinks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "targetNodeId",
+                "anchorTextParameter",
+                "status"
+              ],
+              "properties": {
+                "targetNodeId": {
+                  "type": "string",
+                  "description": "The destination URL ID managed by Harvester bidirectional routing."
+                },
+                "anchorTextParameter": {
+                  "type": "string",
+                  "description": "The entity-dense anchor text parameter used to pass link equity."
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "Recommended",
+                    "Wired",
+                    "Orphan"
+                  ]
+                }
+              }
+            }
+          },
+          "multimodalAssets": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "imageFileName",
+                "didacticAltText"
+              ],
+              "properties": {
+                "imageFileName": {
+                  "type": "string",
+                  "description": "The SlideShift standardized file string: [Node-Title]-[Sequence]-[Intent].webp"
+                },
+                "didacticAltText": {
+                  "type": "string",
+                  "description": "The instructional code block used to teach spatial relationship data context to VLMs."
+                }
+              }
+            }
+          },
+          "coreOfferId": {
+            "type": "string",
+            "description": "The downstream monetization node mapped straight to the page wireframe splitter."
+          }
+        }
+      }
+    }
+  }
+}
