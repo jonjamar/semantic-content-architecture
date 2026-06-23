@@ -28,6 +28,10 @@ Conversational engines operate on razor-thin processing budgets. This architectu
 *   `hasVideoStrategy` **Boolean:** Triggers multimodal data mapping parameters across the node.
 *   `coreOfferId` **Field:** Programmatically binds educational content nodes to high-ticket transactional assets (PDFs, Courses, Consulting Sprints), ensuring a logical, high-converting user journey.
 
+* The included JSON file demonstrates the strict typing used to govern the generative AI process. 
+Review the active template architecture in [contentops_data_schema.json](./contentops_data_schema.json). 
+It acts as the "Single Source of Truth" for the application state.
+
 ---
 
 ## 🚀 Commercial Licensing & Runtime Tiers
